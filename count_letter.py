@@ -2,9 +2,9 @@ from typing import Optional
 
 
 def countLetter(word: str, char: str, countUpperCase: Optional[bool] = False) -> int:
-    if word is isinstance(word, str):
+    if not isinstance(word, str):
         raise TypeError("El parámetro 'word' debe ser de tipo str")
-    if char is isinstance(char, str) or len(char) != 1:
+    if not isinstance(char, str) or len(char) != 1:
         raise TypeError("El parámetro 'char' debe ser una cadena de un solo carácter")
     if not isinstance(countUpperCase, bool):
         raise TypeError("El parámetro 'countUpperCase' es opcional y debe ser de tipo bool")
